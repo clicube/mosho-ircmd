@@ -1,0 +1,15 @@
+[Unit]
+Description=mosho command subscriber
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/services/mosho-cmdsub/bin/mosho-cmdsubd
+WorkingDirectory=/home/pi/services/mosho-cmdsub/bin
+KillMode=process
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
