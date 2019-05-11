@@ -1,0 +1,3 @@
+bin/
+serviceAccountKey.json
+onCmd.sh
