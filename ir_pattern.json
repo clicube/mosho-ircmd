@@ -1,0 +1,28 @@
+{
+  "ac":{
+    "air-on":{
+      "interval": 550,
+      "pattern": "H(8)L(8)F20D03FC0170000071HL(3)L(8)H(8)L(8)F20D03FC0170000071H"
+    },
+    "air-off":{
+      "interval": 550,
+      "pattern": "H(8)L(8)F20D03FC0170070076HL(3)L(8)H(8)L(8)F20D03FC0170070076H"
+    },
+    "light-on-full":{
+      "interval": 550,
+      "pattern": "H(8)L(4)E730E916H"
+    },
+    "light-on-scene":{
+      "interval": 550,
+      "pattern": "H(8)L(4)E73045BAH"
+    },
+    "light-on-night":{
+      "interval": 550,
+      "pattern": "H(8)L(4)E730F10EH"
+    },
+    "light-off":{
+      "interval": 550,
+      "pattern": "H(8)L(4)E730D12EH"
+    }
+  }
+}

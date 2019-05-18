@@ -4,8 +4,8 @@ After=syslog.target network.target
 
 [Service]
 Type=simple
-ExecStart=/home/pi/services/mosho-cmdsub/bin/mosho-cmdsubd
-WorkingDirectory=/home/pi/services/mosho-cmdsub/bin
+ExecStart=/home/pi/services/mosho-ircmd/bin/mosho-ircmdd
+WorkingDirectory=/home/pi/services/mosho-ircmd/bin
 KillMode=process
 Restart=always
 User=pi

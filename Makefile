@@ -3,8 +3,11 @@ fmt:
 
 build:
 	mkdir -p ./bin
-	go build -o ./bin/mosho-cmdsubd ./cmd
-	cp serviceAccountKey.json onCmd.sh ./bin
+	go build -o ./bin/mosho-ircmdd ./cmd
+	cp serviceAccountKey.json ir_pattern.json ./bin
+
+run: build
+	cd bin && ./mosho-ircmdd
 
 clean:
 	go clean ./...
@@ -15,11 +18,11 @@ test:
 
 remote-build:
 	mkdir -p ./bin
-	GOOS=linux GOARCH=arm GOARM=6 go build -o ./bin/mosho-cmdsubd ./cmd
+	GOOS=linux GOARCH=arm GOARM=6 go build -o ./bin/mosho-ircmdd ./cmd
 
 remote-copy: remote-build
-	ssh raspi "mkdir -p services/mosho-cmdsub/bin"
-	scp ./bin/mosho-cmdsubd raspi:services/mosho-cmdsub/bin/mosho-cmdsubd
+	ssh raspi "mkdir -p services/mosho-ircmd/bin"
+	scp ./bin/mosho-ircmdd ir_pattern.json serviceAccountKey.json raspi:services/mosho-ircmd/bin/
 
 remote-run: remote-copy
-	ssh raspi "cd services/mosho-cmdsub/bin && ./mosho-cmdsubd"
+	ssh raspi "cd services/mosho-ircmd/bin && ./mosho-ircmdd"

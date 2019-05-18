@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"mosho-cmdsub/internal"
+	"mosho-ircmd/internal"
 )
 
 func main() {
-	err := internal.Sub()
+	err := internal.Start()
 	if err != nil {
 		fmt.Printf("%s\n", err)
 		os.Exit(-1)
