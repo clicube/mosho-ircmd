@@ -22,7 +22,8 @@ remote-build:
 
 remote-copy: remote-build
 	ssh raspi "mkdir -p services/mosho-ircmd/bin"
-	scp ./bin/mosho-ircmdd ir_pattern.json serviceAccountKey.json raspi:services/mosho-ircmd/bin/
+	scp bin/mosho-ircmdd ir_pattern.json serviceAccountKey.json raspi:services/mosho-ircmd/bin/
+	scp mosho-ircmdd.service raspi:services/mosho-ircmd/
 
-remote-run: remote-copy
-	ssh raspi "cd services/mosho-ircmd/bin && ./mosho-ircmdd"
+remote-install: remote-copy
+	ssh raspi "cd services/mosho-ircmd && sudo cp mosho-ircmdd.service /etc/systemd/system && sudo systemctl enable mosho-ircmdd && sudo service mosho-ircmdd start"

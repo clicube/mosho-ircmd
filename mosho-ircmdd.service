@@ -1,9 +1,10 @@
 [Unit]
-Description=mosho command subscriber
+Description=mosho  IR command service
 After=syslog.target network.target
 
 [Service]
 Type=simple
+Environment="PATH=/home/pi/services/mosho-boardctl/bin"
 ExecStart=/home/pi/services/mosho-ircmd/bin/mosho-ircmdd
 WorkingDirectory=/home/pi/services/mosho-ircmd/bin
 KillMode=process
