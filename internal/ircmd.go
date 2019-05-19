@@ -47,6 +47,8 @@ func Start() error {
 		return err
 	}
 
+	log.Println("IrCmd: Started")
+
 	for {
 		cmd, err := cmdrepo.Next()
 		if err != nil {

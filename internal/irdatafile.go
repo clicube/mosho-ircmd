@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 )
 
 type IrDataFile struct {
@@ -31,13 +32,14 @@ func NewDataFile(filename string) (*IrDataFile, error) {
 		}
 	}
 
+	log.Println("IrDataFile: Initialized")
 	return &IrDataFile{irDataMap}, nil
 }
 
 func (i *IrDataFile) Get(name string) (*IrData, error) {
 	res, ok := i.irDataMap[name]
 	if !ok {
-		return nil, fmt.Errorf("Error: Command name not found: %s", name)
+		return nil, fmt.Errorf("IrDataFile: Command name not found: %s", name)
 	}
 	return res, nil
 }

@@ -5,11 +5,13 @@ import (
 	"fmt"
 	"os/exec"
 	"strconv"
+	"log"
 )
 
 type BoardCtl struct{}
 
 func NewBoardCtl() (*BoardCtl, error) {
+	log.Println("BoardCtl: Initialized")
 	return &BoardCtl{}, nil
 }
 
@@ -19,12 +21,14 @@ type result struct {
 }
 
 func (b *BoardCtl) Send(irdata *IrData) error {
+	log.Printf("BoardCtl: Sending data: %+v", irdata)
 	out, err := exec.Command(
 		"boardctl",
 		"cmd",
 		strconv.Itoa(irdata.Interval),
 		irdata.Pattern,
 	).Output()
+	log.Printf("BoardCtl: Output: %s", string(out))
 
 	// outputをパースしてみる
 	var res result
