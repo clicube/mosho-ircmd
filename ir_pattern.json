@@ -4,11 +4,11 @@
       "interval": 550,
       "pattern": "H(8)L(8)F20D03FC0170000071HL(3)L(8)H(8)L(8)F20D03FC0170000071H"
     },
-    "air-cool-28": {
+    "air-on-cool-28": {
       "interval": 550,
       "pattern": "H(8)L(8)F20D03FC01B00100B0HL(3)L(8)H(8)L(8)F20D03FC01B00100B0H"
     },
-    "air-dry-28": {
+    "air-on-dry-28": {
       "interval": 550,
       "pattern": "H(8)L(8)F20D03FC01B00200B3HL(3)L(8)H(8)L(8)F20D03FC01B00200B3H"
     },
