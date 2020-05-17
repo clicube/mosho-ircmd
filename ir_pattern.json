@@ -1,36 +1,36 @@
 {
-  "ac":{
+  "ac": {
     "air-on": {
       "interval": 550,
       "pattern": "H(8)L(8)F20D03FC0170000071HL(3)L(8)H(8)L(8)F20D03FC0170000071H"
     },
-    "air-on-cool-28": {
-      "interval": 550,
-      "pattern": "H(8)L(8)F20D03FC01B00100B0HL(3)L(8)H(8)L(8)F20D03FC01B00100B0H"
+    "air-on-28": {
+      "interval": 450,
+      "pattern": "H(8)L(4)4004072000000060HL(24)H(8)L(4)4004072000901C01F5B00070070000510A31EBH"
     },
-    "air-on-dry-28": {
-      "interval": 550,
-      "pattern": "H(8)L(8)F20D03FC01B00200B3HL(3)L(8)H(8)L(8)F20D03FC01B00200B3H"
+    "air-on-20": {
+      "interval": 450,
+      "pattern": "H(8)L(4)4004072000000060HL(24)H(8)L(4)4004072000901401F5B00070070000510A31E3H"
     },
-    "air-off":{
-      "interval": 550,
-      "pattern": "H(8)L(8)F20D03FC0170070076HL(3)L(8)H(8)L(8)F20D03FC0170070076H"
+    "air-off": {
+      "interval": 450,
+      "pattern": "H(8)L(4)4004072000000060HL(24)H(8)L(4)4004072000101C01F5B00070070000510A316BH"
     },
-    "light-on-full":{
+    "light-on-full": {
       "interval": 550,
-      "pattern": "H(8)L(4)E730E916H"
+      "pattern": "H(16)L(8)8A6E0800800036H"
     },
-    "light-on-scene":{
+    "light-on-danran": {
       "interval": 550,
-      "pattern": "H(8)L(4)E73045BAH"
+      "pattern": "H(16)L(8)8A6E080000C076H"
     },
-    "light-on-night":{
+    "light-on-kutsurogi": {
       "interval": 550,
-      "pattern": "H(8)L(4)E730F10EH"
+      "pattern": "H(16)L(8)8A6E08000010A6H"
     },
-    "light-off":{
+    "light-off": {
       "interval": 550,
-      "pattern": "H(8)L(4)E730D12EH"
+      "pattern": "H(16)L(8)8A6E08004000F6H"
     }
   }
 }
