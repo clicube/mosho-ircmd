@@ -28,6 +28,10 @@
       "interval": 550,
       "pattern": "H(16)L(8)8A6E08000010A6H"
     },
+    "light-on-memory-night": {
+      "interval": 550,
+      "pattern": "H(16)L(8)8A6E0800200096H"
+    },
     "light-off": {
       "interval": 550,
       "pattern": "H(16)L(8)8A6E08004000F6H"
