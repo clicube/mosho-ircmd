@@ -39,6 +39,18 @@
     "light-off": {
       "interval": 550,
       "pattern": "H(16)L(8)8A6E08004000F6H"
+    },
+    "air-sharp-on-cool-26": {
+      "interval": 440,
+      "pattern": "H(8)L(4)555AF30890884400100500278BH"
+    },
+    "air-sharp-on-joshitsu": {
+      "interval": 440,
+      "pattern": "H(8)L(4)555AF3080088C400100500278AH"
+    },
+    "air-sharp-off": {
+      "interval": 440,
+      "pattern": "H(8)L(4)555AF3080084C4001005002786H"
     }
   }
 }
